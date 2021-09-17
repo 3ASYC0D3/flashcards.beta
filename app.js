@@ -5,6 +5,8 @@ const cons = require('consolidate');
 const viewPath = path.join(__dirname, 'views');
 const port = 3000;
 
+app.use(express.static('static'));
+app.use(express.static(path.join(__dirname, 'static')))
 
 app.engine('html', cons.swig);
 app.set('views', viewPath);
