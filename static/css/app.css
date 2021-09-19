@@ -36,25 +36,29 @@ body {
 	justify-content: center;
 	align-items: center;
 	background-color: rgb(255, 238, 0);
-	
 }
 
-.title {
+.title, .logo {
 	font-size: 2rem;
 	font-weight: 700;
 	margin-bottom: 1.5rem;
 	padding: 1rem;
-	border: 5px solid purple;
+	border: 5px solid #800080;
 	border-radius: 25px 5px 25px 5px;
 	background-color: seagreen;
 	color: white;
 	text-shadow: 2px 2px black;
 }
 
+nav {
+	padding: 15px;
+	top: 0;
+	position: fixed;
+}
+
 .description {
 	text-align: center;
 	border-bottom: 2px solid purple;
-	
 	padding-bottom: 0.2rem;
 	margin-bottom: 4rem;
 	font-size: 1.2rem;
@@ -85,11 +89,46 @@ button {
 	padding: 1rem;
 	transition: .2s;
 	letter-spacing: .2rem;
-	text-shadow: 2px 2px teal;
+	text-shadow: 2px 2px seagreen;
 }
 
 .btn:hover {
 	letter-spacing: .4rem;
-	text-shadow: 3px 3px white, 4px 4px teal;
-	
+	text-shadow: 3px 3px white, 4px 4px seagreen
+}
+
+.logo {
+	transition: .2s;
+}
+
+.logo-btn {
+	text-decoration: none;
+	color: white;
+}
+
+.logo:hover {
+	box-shadow: 1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+	text-shadow: 2px 2px black,1px 1px 2px black, 0 0 25px black, 0 0 5px black;
+	background-color: rgb(62, 180, 113);
+	border: 5px solid #ac00ac;
+}
+
+.card-front {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: rgb(250, 255, 184);
+	width: 33vw;
+	height: 38vh;
+	border: 1px solid teal;
+	box-shadow:  8px 8px black;
+	position: relative;
+}
+
+.question-number {
+	font-size: 1.2rem;
+	position: absolute;
+	top: 15px;
+	left: 10px;
 }
