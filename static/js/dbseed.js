@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 const cardSamples = require('./cards');
 const { Schema } = mongoose;
 const dbUrl = 'mongodb://localhost:27017/flashcards';
+const Card = require('./../../models/cards');
 
 
 mongoose.connect(dbUrl)
@@ -11,14 +12,6 @@ mongoose.connect(dbUrl)
   .catch(err => {
         console.log(err)
   });
-
-  const cardSchema = new mongoose.Schema({
-      front: String,
-      back: String,
-      number: String
-  });
-  
-const Card = mongoose.model('Card', cardSchema);
 
 const seedDB = async () => {
     await Card.deleteMany({});
