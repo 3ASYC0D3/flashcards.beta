@@ -261,10 +261,10 @@ const cards = [
 const data = Object.entries(cards[1]);
 
 function getCard() {
-    if (currentCard < 50) {
+    if (currentCard <= 50) {
         questionNumber.innerHTML = `<p>Question ${currentCard} of ${cards.length}</p>`
         answer.style.display = 'none';
-        let displayedCard = cards[currentCard];
+        let displayedCard = cards[currentCard - 1];
         question.innerHTML = `<p>${displayedCard.front}</p>`;
         answer.innerHTML = `<p>${displayedCard.back}</p>`;
         currentCard++;
@@ -273,6 +273,8 @@ function getCard() {
         answer.style.display = 'block';
         answer.innerHTML = `No more cards to remind.`;
         questionNumber.style.display = 'none';
+        showAnswer.style.display = 'none';
+        nextCard.style.display = 'none';
     }
 }
 
