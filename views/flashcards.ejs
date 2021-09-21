@@ -10,17 +10,30 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onload="getCard()">
     <nav class="">
-        <h2 class="logo"><a href="/" class="logo-btn">Web Dev Flashcards</a></h2>
+        <h2 class="logo current-card"><a href="/" class="logo-btn">Web Dev Flashcards</a></h2>
     </nav>
-    <div class="container">
+
+
+    <div class="container">    
         <div class="card-front">
-            <h4 class="question-number">Question X of XYZ </h4>
-            <h2 class="question-text">
-                Here will be hard question.
-            </h2>
+            <div class="question-number">
+                <p>Question X of XYZ </p>
+            </div>
+            <div class="question">
+                <p>question</p>
+            </div>
+            <div class="answer">
+                <p>answer</p>
+            </div>
         </div>
+        <div class="button-container">
+            <button id="showAnswer" class="btn-back">See the answer</button>
+            <button id="nextCard" class="btn-go-on"> Easy, go on! </button>
+        </div>
+        
     </div>
+    <script src="/js/main.js"></script>
 </body>
 </html>
