@@ -4,6 +4,7 @@ const path = require('path');
 const cons = require('consolidate');
 const ejs = require('ejs');
 const mongoose = require('mongoose');
+const Card = require('./models/cards');
 
 
 const viewPath = path.join(__dirname, 'views');
@@ -29,9 +30,10 @@ app.get('/', (req, res) => {
     res.render('home')
 }); 
 
-app.get('/flashcards', (req, res) => {
-    res.render('flashcards')
-})
+app.get('/flashcards', async (req, res) => {
+    const cards = await Card.find();
+    res.render('flashcards', { cards })
+});
 
 
 
