@@ -1,6 +1,7 @@
 const showAnswer = document.getElementById('showAnswer');
 const nextCard = document.getElementById('nextCard');
-let question = document.querySelector('.question')
+const restart = document.querySelector('.end-button-container');
+let question = document.querySelector('.question');
 let answer = document.querySelector('.answer');
 let questionNumber = document.querySelector('.question-number');
 let currentCard = 1;
@@ -275,6 +276,7 @@ function getCard() {
         questionNumber.style.display = 'none';
         showAnswer.style.display = 'none';
         nextCard.style.display = 'none';
+        restart.style.display = 'block';
     }
 }
 
